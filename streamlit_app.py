@@ -1,16 +1,18 @@
 import streamlit as st
 
-# Custom CSS to hide the fullscreen button
-st.markdown(
-    """
+# Inject custom CSS to hide or modify the class '_container_1upux_1'
+st.markdown("""
     <style>
-        .css-1aumxhk { 
-            display: none;  /* Hides the fullscreen button */
+        /* Hide the specific class by setting display to none */
+        ._container_1upux_1 {
+            display: none !important;
         }
     </style>
-    """, unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
-# Your Streamlit app content
-st.title('Streamlit App Without Fullscreen Option')
-st.write("This app doesn't show the fullscreen button.")
+# Your Streamlit content here
+st.title("Streamlit App with Custom CSS")
+st.write("This is a sample app.")
+
+# You can add other components as needed
+st.button("Click me")
